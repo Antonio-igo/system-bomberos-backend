@@ -5,6 +5,11 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+app.get("/", (req, res) => {
+    res.send("Backend del Sistema de Bomberos funcionando.");
+  });
+  
+
 app.get("/api/distance-matrix", async (req, res) => {
   const { origins, destinations } = req.query;
   const API_KEY = process.env.GOOGLE_MAPS_API_KEY;
