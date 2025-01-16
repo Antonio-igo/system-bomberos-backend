@@ -94,7 +94,7 @@ app.get("/", (req, res) => {
         },
       });
       console.log("Parámetros recibidos para geocodificación:", { address });
-console.log("Respuesta de la API de Geocoding:", response.data);
+      console.log("Respuesta de la API de Geocoding:", response.data);
 
       res.json(response.data);
     } catch (error) {
